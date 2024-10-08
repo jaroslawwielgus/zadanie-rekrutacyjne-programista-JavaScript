@@ -2,5 +2,12 @@
 	"_version": "1.71.70",
 	"sap.app": {
 		"id": "ui5.walkthrough"
+	},
+	"resources": {
+		"css": [
+			{
+				"uri": "css/style.css"
+			}
+		]
 	}
 }

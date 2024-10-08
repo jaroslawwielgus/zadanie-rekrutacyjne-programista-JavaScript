@@ -10,10 +10,10 @@
             <content>
                <Panel>
                   <content>
-                        <Text text="Zadanie rekrutacyjne TOYA S.A."/>
+                        <Text text="Zadanie rekrutacyjne TOYA S.A." class="element title"/>
                         <Button
                             text="Dane klientów"
-                            class="sapUiLargeMargin"
+                            class="sapUiLargeMargin element"
                             press=".onShowClients"/>
                     </content>
                </Panel>
