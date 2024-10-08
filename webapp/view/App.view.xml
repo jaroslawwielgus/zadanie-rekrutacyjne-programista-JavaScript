@@ -1,0 +1,25 @@
+<mvc:View
+   controllerName="ui5.walkthrough.controller.App"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns="sap.m"
+   displayBlock="true">
+
+   <App>
+      <pages>
+         <Page title="Widok 1">
+            <content>
+               <Panel>
+                  <content>
+                        <Text text="Zadanie rekrutacyjne TOYA S.A."/>
+                        <Button
+                            text="Dane klientów"
+                            class="sapUiLargeMargin"
+                            press=".onShowClients"/>
+                    </content>
+               </Panel>
+            </content>
+         </Page>
+      </pages>
+   </App>		
+		
+</mvc:View>
