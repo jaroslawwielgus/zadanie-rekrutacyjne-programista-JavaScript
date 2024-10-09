@@ -12,7 +12,7 @@
                   <content>
                         <Text text="Zadanie rekrutacyjne TOYA S.A." class="element title"/>
                         <Button
-                            text="Dane klientów"
+                            text="{i18n>showDataButtonText}"
                             class="sapUiLargeMargin element"
                             press=".onShowClients"/>
                     </content>

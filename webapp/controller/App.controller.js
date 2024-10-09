@@ -5,7 +5,13 @@ sap.ui.define(
 
 		return Controller.extend("ui5.walkthrough.controller.App", {
 			onShowClients() {
-				MessageToast.show("Clients' data");
+				const oBundle = this.getView().getModel("i18n").getResourceBundle();
+				const sRecipient = this.getView()
+					.getModel()
+					.getProperty("/recipient/name");
+				const sMsg = oBundle.getText("dataMsg", [sRecipient]);
+
+				MessageToast.show(sMsg);
 			},
 		});
 	}
