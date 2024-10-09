@@ -3,23 +3,26 @@
    xmlns:mvc="sap.ui.core.mvc"
    xmlns="sap.m"
    displayBlock="true">
-
-   <App>
-      <pages>
-         <Page title="Widok 1">
-            <content>
-               <Panel>
-                  <content>
-                        <Text text="Zadanie rekrutacyjne TOYA S.A." class="element title"/>
-                        <Button
-                            text="{i18n>showDataButtonText}"
-                            class="sapUiLargeMargin element"
-                            press=".onShowClients"/>
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>firstPageTitle}">
+                    <content>
+                        <Panel
+                            class="sapUiResponsiveMargin"
+							width="auto">
+                            <content>
+                                    <Text text="{i18n>showTitleText}" class="sapUiSmallMargin element title"/>
+                                    <Button
+                                        text="{i18n>showDataButtonText}"
+                                        class="sapUiLargeMargin element"
+                                        press=".onShowClients"/>
+                                </content>
+                        </Panel>
                     </content>
-               </Panel>
-            </content>
-         </Page>
-      </pages>
-   </App>		
+                </Page>
+            </pages>
+        </App>
+   </Shell>		
 		
 </mvc:View>
