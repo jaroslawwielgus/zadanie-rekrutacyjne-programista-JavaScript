@@ -35,6 +35,13 @@
 					"supportedLocales": [""],
 					"fallbackLocale": ""
 				}
+			},
+			"mainService": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"serviceUrl": "http://localhost:8080/odata/Northwind.svc/",
+					"odataVersion": "2.0"
+				}
 			}
 		},
 		"rootView": {
