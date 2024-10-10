@@ -4,15 +4,8 @@ sap.ui.define(
 		"use strict";
 
 		return Controller.extend("ui5.walkthrough.controller.StartPanel", {
-			// onInit() {
-			// 	console.log("onInit called");
-			// 	const oModel = this.getOwnerComponent().getModel("mainService");
-			// 	this.getView().setModel(oModel);
-			// 	console.log("Model OData ustawiony:", oModel);
-			// },
-
 			onShowClients() {
-				console.log("onShowClients called");
+				console.log("coś");
 				const oBundle = this.getView().getModel("i18n").getResourceBundle();
 				const sRecipient = this.getView()
 					.getModel()
@@ -20,6 +13,8 @@ sap.ui.define(
 				const sMsg = oBundle.getText("dataMsg", [sRecipient]);
 
 				MessageToast.show(sMsg);
+
+				console.log("cokolwiek");
 			},
 		});
 	}

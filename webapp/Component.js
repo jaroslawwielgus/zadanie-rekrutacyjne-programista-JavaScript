@@ -8,10 +8,8 @@ sap.ui.define(
 				interfaces: ["sap.ui.core.IAsyncContentCreation"],
 				manifest: "json",
 			},
-
 			init() {
 				UIComponent.prototype.init.apply(this, arguments);
-
 				const oData = {
 					recipient: {
 						name: "klientów",
