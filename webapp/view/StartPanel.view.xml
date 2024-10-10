@@ -1,0 +1,49 @@
+<mvc:View
+    controllerName="ui5.walkthrough.controller.StartPanel"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+    <Panel
+        class="sapUiResponsiveMargin"
+        width="auto">
+        <content>
+            <Text text="{i18n>showTitleText}" class="sapUiSmallMargin element title"/>
+            <Button
+                text="{i18n>showDataButtonText}"
+                class="sapUiLargeMargin element"
+                press=".onShowClients"/>
+            <Table
+                  items="{
+                     path: '/Customers'
+                  }">
+                  <columns>
+                     <Column>
+                        <Text text="Nazwa firmy" />
+                     </Column>
+                     <Column>
+                        <Text text="Adres" />
+                     </Column>
+                     <Column>
+                        <Text text="Miasto" />
+                     </Column>
+                     <Column>
+                        <Text text="Kod pocztowy" />
+                     </Column>
+                     <Column>
+                        <Text text="Numer telefonu" />
+                     </Column>
+                  </columns>
+                  <items>
+                     <ColumnListItem>
+                        <cells>
+                           <Text text="{CompanyName}" />
+                           <Text text="{Address}" />
+                           <Text text="{City}" />
+                           <Text text="{PostalCode}" />
+                           <Text text="{Phone}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Panel>
+</mvc:View>
