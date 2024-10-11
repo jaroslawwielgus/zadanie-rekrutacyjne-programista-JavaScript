@@ -12,6 +12,15 @@
 		}'>
 
         </script>
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            var app = new sap.m.App({ initialPage: "idPage1" });
+            var page1 = sap.ui.view({ id: "idPage1", viewName: "ui5.walkthrough.view.App", type: sap.ui.core.mvc.ViewType.XML });
+            app.addPage(page1);
+            app.placeAt("content");
+        })
+    </script>
+
 </head>
 
 <body class="sapUiBody" id="content">

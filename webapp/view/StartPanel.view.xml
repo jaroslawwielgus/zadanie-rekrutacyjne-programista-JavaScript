@@ -12,9 +12,9 @@
                 class="sapUiLargeMargin element"
                 press=".onShowClients"/>
             <Table
-                  items="{
-                     path: '/Customers'
-                  }">
+                  id="idCustomers"
+                  items="{path: '/Customers'}"
+                  class="sapUiSmallMargin">
                   <columns>
                      <Column>
                         <Text text="Nazwa firmy" />
