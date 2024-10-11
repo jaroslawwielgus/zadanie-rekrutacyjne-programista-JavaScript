@@ -2,15 +2,19 @@
     controllerName="ui5.walkthrough.controller.StartPanel"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-    <Panel
-        class="sapUiResponsiveMargin"
-        width="auto">
+   <Page title="{i18n>firstPageTitle}">
         <content>
-            <Text text="{i18n>showTitleText}" class="sapUiSmallMargin element title"/>
-            <Button
-                text="{i18n>showDataButtonText}"
-                class="sapUiLargeMargin element"
-                press=".onShowClients"/>
+            <Panel
+                class="sapUiResponsiveMargin"
+                width="auto">
+                <content>
+                    <Text text="{i18n>showTitleText}" class="sapUiSmallMargin element title"/>
+                    <Button
+                        text="{i18n>showDataButtonText}"
+                        class="sapUiLargeMargin element"
+                        press=".onShowClients"/>
+                </content>
+            </Panel>
         </content>
-    </Panel>
+    </Page>
 </mvc:View>

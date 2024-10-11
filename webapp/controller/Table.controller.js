@@ -1,5 +1,3 @@
-var ControllerInstance;
-
 sap.ui.define(
 	[
 		"sap/ui/core/mvc/Controller",
@@ -10,20 +8,23 @@ sap.ui.define(
 		"use strict";
 
 		return Controller.extend("ui5.walkthrough.controller.Table", {
-			constructor: function () {
-				if (!ControllerInstance) {
-					ControllerInstance = this;
-					this.onInit();
-				}
-				return ControllerInstance;
+			onInit() {
+				console.log("Kontroler zainicjalizowany");
 			},
 
-			onInit() {
-				console.log("coś");
+			onAfterRendering() {
+				// Ustawiamy model dopiero po pełnym załadowaniu widoku
 				var oDataModel = new sap.ui.model.odata.v2.ODataModel(
 					"https://thingproxy.freeboard.io/fetch/https://services.odata.org/V2/Northwind/Northwind.svc"
 				);
-				this.getView().setModel(oDataModel);
+
+				// Sprawdzamy, czy widok jest dostępny
+				if (this.getView()) {
+					this.getView().setModel(oDataModel);
+					console.log("Model ustawiony po załadowaniu widoku");
+				} else {
+					console.error("Widok nie jest dostępny");
+				}
 			},
 
 			onFilterInvoices(oEvent) {
