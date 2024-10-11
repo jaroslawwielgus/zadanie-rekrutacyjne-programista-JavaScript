@@ -11,39 +11,6 @@
                 text="{i18n>showDataButtonText}"
                 class="sapUiLargeMargin element"
                 press=".onShowClients"/>
-            <Table
-                  id="idCustomers"
-                  items="{path: '/Customers'}"
-                  class="sapUiSmallMargin">
-                  <columns>
-                     <Column>
-                        <Text text="Nazwa firmy" />
-                     </Column>
-                     <Column>
-                        <Text text="Adres" />
-                     </Column>
-                     <Column>
-                        <Text text="Miasto" />
-                     </Column>
-                     <Column>
-                        <Text text="Kod pocztowy" />
-                     </Column>
-                     <Column>
-                        <Text text="Numer telefonu" />
-                     </Column>
-                  </columns>
-                  <items>
-                     <ColumnListItem>
-                        <cells>
-                           <Text text="{CompanyName}" />
-                           <Text text="{Address}" />
-                           <Text text="{City}" />
-                           <Text text="{PostalCode}" />
-                           <Text text="{Phone}" />
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
         </content>
     </Panel>
 </mvc:View>
