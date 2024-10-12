@@ -10,14 +10,17 @@ controllerName="ui5.walkthrough.controller.Table"
                 <content>
                   <Table
                      id="idCustomers"
-                     items="{path: '/Customers', sorter: {path: 'CompanyName', descending: true}}"
+                     items="{path: '/Customers'}"
                      class="sapUiSmallMargin"
                      >
                      <headerToolbar>
                         <Toolbar>
+                           <Button icon="sap-icon://arrow-top" press=".onSortAscending"/>
+                           <Button icon="sap-icon://arrow-bottom" press=".onSortDescending"/>
                            <Title text=""/>
                            <ToolbarSpacer/>
-                           <SearchField 
+                           <SearchField
+                           placeholder="Podaj nazwę miasta" 
                            width="50%" 
                            search=".onFilterInvoices"/>
                         </Toolbar>

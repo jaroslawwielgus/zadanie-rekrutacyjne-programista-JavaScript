@@ -22,6 +22,11 @@ sap.ui.define(
 				if (this.getView()) {
 					this.getView().setModel(oDataModel);
 					console.log("Model ustawiony po załadowaniu widoku");
+
+					var oTable = this.byId("idCustomers");
+					var oBinding = oTable.getBinding("items");
+					var oSorter = new sap.ui.model.Sorter("CompanyName", false); // false oznacza sortowanie rosnące
+					oBinding.sort(oSorter);
 				} else {
 					console.error("Widok nie jest dostępny");
 				}
@@ -37,6 +42,20 @@ sap.ui.define(
 				const oList = this.byId("idCustomers");
 				const oBinding = oList.getBinding("items");
 				oBinding.filter(aFilter);
+			},
+
+			onSortAscending: function () {
+				var oTable = this.byId("idCustomers");
+				var oBinding = oTable.getBinding("items");
+				var oSorter = new sap.ui.model.Sorter("CompanyName", false); // false oznacza sortowanie rosnące
+				oBinding.sort(oSorter);
+			},
+
+			onSortDescending: function () {
+				var oTable = this.byId("idCustomers");
+				var oBinding = oTable.getBinding("items");
+				var oSorter = new sap.ui.model.Sorter("CompanyName", true); // true oznacza sortowanie malejące
+				oBinding.sort(oSorter);
 			},
 		});
 	}
