@@ -9,7 +9,7 @@
    `npm install -g npm`
 
 3. Potem zaktualizuj node-a pobierając odpowiedni plik z internetu:
-   []https://nodejs.org/en
+   https://nodejs.org/en
 
 4. Na koniec użyj komendy:
    `ui5 serve`
